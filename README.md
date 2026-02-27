@@ -90,26 +90,6 @@ DATABASE_URL=
 | `@required` | Must be present |
 | `@type=string(startsWith=X)` | Prefix validation |
 
-## Integration with Other Skills
-
-### Docker Skill
-
-```dockerfile
-# Use Varlock as entrypoint
-CMD ["varlock", "run", "--", "npm", "start"]
-```
-
-### Clerk Skill
-
-```bash
-# Test passwords are sensitive
-# @type=string @sensitive
-TEST_ADMIN_PASSWORD=
-
-# Test emails are NOT sensitive (contain +clerk_test)
-# @type=string(contains=+clerk_test) @sensitive=false
-TEST_ADMIN_EMAIL=
-```
 
 ## Handling Secret Requests
 
@@ -123,12 +103,6 @@ When users ask Claude to:
 ## Credits
 
 This skill wraps [Varlock](https://github.com/dmno-dev/varlock) by [DMNO](https://dmno.dev).
-
-## Related Skills
-
-- [docker-claude-skill](https://github.com/wrsmith108/docker-claude-skill) — Container-based development
-- [clerk-claude-skill](https://github.com/wrsmith108/clerk-claude-skill) — Authentication patterns
-- [linear-claude-skill](https://github.com/wrsmith108/linear-claude-skill) — Issue management
 
 ## License
 
