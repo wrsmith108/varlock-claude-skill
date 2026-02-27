@@ -14,16 +14,18 @@ This skill wraps [Varlock](https://varlock.dev) to enforce secure patterns and p
 
 ## Installation
 
-### Option A: Claude Plugin (Recommended)
+### Option A: One-liner (Recommended)
 
 ```bash
-claude plugin add github:wrsmith108/varlock-claude-skill
+mkdir -p ~/.claude/skills/varlock && curl -sSL https://raw.githubusercontent.com/wrsmith108/varlock-claude-skill/main/skills/varlock/SKILL.md -o ~/.claude/skills/varlock/SKILL.md
 ```
 
 ### Option B: Manual
 
 ```bash
-git clone https://github.com/wrsmith108/varlock-claude-skill ~/.claude/skills/varlock
+git clone https://github.com/wrsmith108/varlock-claude-skill /tmp/varlock-skill
+cp -r /tmp/varlock-skill/skills/varlock ~/.claude/skills/
+rm -rf /tmp/varlock-skill
 ```
 
 ## Prerequisites
