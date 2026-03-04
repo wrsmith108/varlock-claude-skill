@@ -1,6 +1,7 @@
 ---
 name: varlock
 description: Secure environment variable management with Varlock. Use when handling secrets, API keys, credentials, or any sensitive configuration. Ensures secrets are never exposed in terminals, logs, traces, or Claude's context. Trigger phrases include "environment variables", "secrets", ".env", "API key", "credentials", "sensitive", "Varlock".
+version: 1.0.0
 ---
 
 # Varlock Security Skill
